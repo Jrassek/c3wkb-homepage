@@ -1,0 +1,69 @@
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    padding: 20px;
+}
+
+#logo {
+    height: 85px;
+    width: auto;
+}
+
+.terminalBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.terminal {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 5px;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    overflow: auto;
+}
+
+.terminal .prompt .user {
+    color: #4caf50;
+}
+
+.terminal .prompt .path {
+    color: #2196f3;
+}
+
+.terminal .prompt .input {
+    color: #fff;
+}
+
+.terminal .output {
+    color: #fff;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 60vh;
+    overflow: auto;
+}
+
+.terminal .prompt .cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    background-color: #fff;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
